@@ -9,7 +9,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd.. && cd client && npm run install && npm run build"
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "keywords": [],
   "author": "Askat Bakyev",
