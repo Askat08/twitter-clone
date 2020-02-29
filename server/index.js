@@ -3,7 +3,9 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const passport = require("passport");
+
 const users = require("./routes/users");
+const posts = require("./routes/posts");
 
 // Setup enviroment
 dotenv.config();
@@ -16,7 +18,8 @@ const uri = process.env.MONGODB_URI;
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useCreateIndex: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
 const app = express();
@@ -31,5 +34,6 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 app.use("/api/users", users);
+app.use("/api/posts", posts);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
