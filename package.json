@@ -9,14 +9,14 @@
     "server": "cd server && nodemon index.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && cd client && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Askat08/twitter-clone.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Askat",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Askat08/twitter-clone/issues"
