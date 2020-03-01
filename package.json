@@ -1,12 +1,12 @@
 {
   "name": "twitter-clone",
   "version": "1.0.0",
-  "description": "Twitter web site clone",
+  "description": "Twitter clone",
   "main": "index.js",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "cd server && node index.js",
-    "server": " cd server && nodemon index.js",
+    "start": "node index.js --prefix server",
+    "server": "nodemon index.js --prefix server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
