@@ -11,7 +11,7 @@ const posts = require("./routes/posts");
 require("dotenv").config();
 
 // Server PORT
-const PORT = process.env.PORT || 1234;
+const PORT = process.env.PORT;
 const uri = process.env.MONGODB_URI;
 
 // mongo DB connect
@@ -20,6 +20,10 @@ mongoose.connect(uri, {
   useCreateIndex: true,
   useUnifiedTopology: true,
   useFindAndModify: false
+});
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("MongoDB database connection established successfuly");
 });
 
 const app = express();

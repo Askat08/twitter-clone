@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div>
-          <Router>
+          <BrowserRouter>
             <Main>
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -43,7 +43,7 @@ class App extends Component {
                 <Route component={NotFound} />
               </Switch>
             </Main>
-          </Router>
+          </BrowserRouter>
         </div>
       </Provider>
     );
