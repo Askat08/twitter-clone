@@ -1,0 +1,25 @@
+{
+  "name": "twitter-clone",
+  "version": "1.0.0",
+  "description": "Twitter web site clone",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "cd server && node index.js",
+    "server": " cd server && nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Askat08/twitter-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Askat08/twitter-clone/issues"
+  },
+  "homepage": "https://github.com/Askat08/twitter-clone#readme"
+}
