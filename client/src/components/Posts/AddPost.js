@@ -17,7 +17,7 @@ const styles = {
     width: "100%",
     marginTop: 20,
     marginBottom: 20,
-    backgroundColor: "#8b008b",
+    backgroundColor: "#008080",
     color: "#fff",
     "&:hover": {
       color: "#8b008b"

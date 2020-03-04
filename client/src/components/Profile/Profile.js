@@ -40,11 +40,11 @@ const styles = {
     textAlign: "right"
   },
   btnFollow: {
-    backgroundColor: "#9400d3",
+    backgroundColor: "#008080",
     color: "#fff",
     "&:hover": {
-      color: "#9400d3",
-      borderColor: "#9400d3",
+      color: "#008080",
+      borderColor: "#008080",
       backgroundColor: "#fff"
     }
   }

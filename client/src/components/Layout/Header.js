@@ -128,7 +128,7 @@ class Header extends Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" style={{ backgroundColor: "#4b0082" }}>
+        <AppBar position="static" style={{ backgroundColor: "#008080" }}>
           <Toolbar className={classes.space}>
             <Link to="/" className={classes.logo}>
               Twitter-clone
