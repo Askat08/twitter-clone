@@ -15,6 +15,8 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import SearchForm from "../Search/SearchForm";
 
+import logo from "../../logo.png";
+
 const styles = {
   root: {
     flexGrow: 1
@@ -131,7 +133,7 @@ class Header extends Component {
         <AppBar position="static" style={{ backgroundColor: "#008080" }}>
           <Toolbar className={classes.space}>
             <Link to="/" className={classes.logo}>
-              Twitter-clone
+              <img src={logo} style={{ width: 50, padding: 10 }} />
             </Link>
             <SearchForm />
             {isAuthenticated ? authLinks : guestLinks}
