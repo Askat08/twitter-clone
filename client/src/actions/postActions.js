@@ -3,7 +3,7 @@ import { ADD_POST, GET_POSTS, LOADING_POSTS } from "../constants";
 
 export const addPost = postData => dispatch => {
   axios
-    .post("http://localhost:1234/api/posts/add", postData)
+    .post("/api/posts/add", postData)
     .then(res =>
       dispatch({
         type: ADD_POST,
@@ -16,7 +16,7 @@ export const addPost = postData => dispatch => {
 export const getPosts = () => dispatch => {
   dispatch(loadPosts);
   axios
-    .get("http://localhost:1234/api/posts")
+    .get("/api/posts")
     .then(res =>
       dispatch({
         type: GET_POSTS,
@@ -28,7 +28,7 @@ export const getPosts = () => dispatch => {
 
 export const getPostByFollowingUser = () => dispatch => {
   axios
-    .get("http://localhost:1234/api/posts/following")
+    .get("/api/posts/following")
     .then(res =>
       dispatch({
         type: GET_POSTS,
